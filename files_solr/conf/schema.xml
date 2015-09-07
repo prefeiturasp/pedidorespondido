@@ -941,6 +941,20 @@
    <field name="orgao_facet" type="string" indexed="true" stored="false"/>
    <field name="texto" type="text_general" indexed="true" stored="true"/>
    <field name="texto_facet" type="string" indexed="true" stored="false"/>
+   <field name="org" type="text_general" indexed="true" stored="true"/>
+   <field name="org_facet" type="string" indexed="true" stored="false"/>
+   <field name="pedido" type="text_general" indexed="true" stored="true"/>
+   <field name="pedido_facet" type="string" indexed="true" stored="false"/>
+   <field name="resposta" type="text_general" indexed="true" stored="true"/>
+   <field name="resposta_facet" type="string" indexed="true" stored="false"/>
+   
+   
+
+   
+   
+
+
+
 
    <!-- catchall field, containing all other searchable text fields (implemented
         via copyField further on in this schema  -->
@@ -1038,6 +1052,8 @@
    <copyField source="secretaria" dest="secretaria_facet"/>
    <copyField source="orgao" dest="orgao_facet"/>
    <copyField source="texto" dest="texto_facet"/>
+   <copyField source="org" dest="org_facet"/>
+   
 
 
    <!-- Copy the price into a currency enabled field (default USD) -->

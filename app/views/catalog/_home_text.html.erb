@@ -1,3 +1,57 @@
-<h1 class="text-center"><%= nomeEstilizado %></h1>
+<!--<h1 class="text-center"><%= nomeEstilizado %></h1>
 
-<%= render 'sobre' %>
+<%= render 'sobre' %> -->
+
+<!--<div class="page-header row">
+  <h1 class="col-md-8 page-heading"><%= t('blacklight.welcome') %></h1>
+  
+  <ul class="nav nav-pills col-md-4">
+    <li><a href="https://github.com/projectblacklight/blacklight/">Github</a></li>
+    <li><a href="https://github.com/projectblacklight/blacklight/wiki">Wiki</a></li>
+    <li><a href="https://github.com/projectblacklight/blacklight/releases/tag/v<%= Blacklight::VERSION %>">Release Notes</a></li>
+  </ul>
+
+
+</div> -->
+
+<div id="getting-started">
+  <h3 class='section-heading'>Seu pedido já foi respondido?</h3>
+  
+  <p> Com a Lei de Acesso à Informação (Lei Federal nº 12.527/2011) todos os órgãos públicos devem responder a solicitações de informação dos cidadãos e pessoas jurídicas, com prazos e procedimentos estabelecidos. 
+
+  <p> Mas cada pedido é respondido individualmente, isto é, somente a pessoa que formulou a pergunta sabe daquela resposta. Se todas as perguntas forem divulgadas, resguardadas as informações pessoais protegidas por Lei, todos saem ganhando: o poder público, que não precisa respondê-las novamente a cada pergunta; e os cidadãos, que podem ter sua resposta atendida prontamente. </p>
+
+  <p> Em fase experimental, este projeto está sendo desenvolvido pela <b> Controladoria Geral do Município de São Paulo</b> a partir de tecnologias livres e poderá ser replicado por qualquer entidade pública disposta a divulgar sua base de pedidos de informação. </p>
+
+  <p> Enquanto o conteúdo dos pedidos municipais passa por tratamento para retirada de informações pessoais que não podem ser divulgadas, utilizaremos apenas pedidos de exemplo, para fins de testes </p>
+
+  <h4> Desenvolvimento </h4>
+
+  Este site é um <a href="pt.wikipedia.org/wiki/Software_livre"> software livre </a> e aqui pode ser encontrado o <a href="//github.com/campagnucci/docsolr"> repositório do código fonte </a>. 
+
+  Este site se baseia principalmente em duas tecnologias (também livres): [BlackLight](//projectblacklight.org) e [Solr](//lucene.apache.org/solr) e foi desenvolvido a partir do projeto "Diário Livre"
+
+</div>
+
+<%# This is the same panel shown in the Rails welcome template %>
+<%#<div id="about">
+  <h3 class='section-heading'><a href="/rails/info/properties">About your application&rsquo;s environment</a></h3>
+  <div id="about-content" class="well" style="display: none"></div>
+</div>
+%>
+<script>
+  $(function() {
+    $('#about a').on('click', function(e) {
+      e.preventDefault();
+
+      if ($('#about-content').html() == "") {
+        $('#about-content').load($(this).attr("href"), function() {
+          $('#about-content').show();
+        });
+      } else {
+        $('#about-content').toggle();
+      }
+    });
+  });
+</script>
+

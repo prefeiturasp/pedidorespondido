@@ -1,0 +1,1 @@
+http://localhost:8080/solr/update/csv?stream.file=/home/cappuccino/projects/pedidorespondido/pedidosteste.csv&commit=true&header=true&fieldnames=id,org,pedido,resposta&stream.contentType=text/csv;charset=utf-8

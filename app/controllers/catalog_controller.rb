@@ -60,9 +60,9 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the 
     # facet bar
-    config.add_facet_field 'secretaria_facet', :label => 'Secretaria', :limit => 10 
-    config.add_facet_field 'orgao_facet', :label => 'Orgão', :limit => 10 
-    config.add_facet_field 'tipo_conteudo_facet', :label => 'Tipo de Conteúdo', :limit => 10 
+    config.add_facet_field 'org_facet', :label => 'Órgão', :limit => 10 
+    #config.add_facet_field 'orgao_facet', :label => 'Orgão', :limit => 10 
+    #config.add_facet_field 'tipo_conteudo_facet', :label => 'Tipo de Conteúdo', :limit => 10 
     #config.add_facet_field 'secretaria_facet', :label => 'Publication Year', :single => true
     #config.add_facet_field 'tipo_conteudo_facet', :label => 'Topic', :limit => 20 
     #config.add_facet_field 'language_facet', :label => 'Language', :limit => true 
@@ -72,7 +72,7 @@ class CatalogController < ApplicationController
 
     #config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']
 
-    config.add_facet_field 'data', :label => 'Data de Publicação', :query => {
+    config.add_facet_field 'data', :label => 'Data de Resposta', :query => {
       :date_range => { :label => 'Intervalo de Datas', :fq => "data:[* TO *]" }, :week_1 => { :label => 'Menos de 1 semana', :fq => "data:[#{Date.today - 7.days}T00:00:00.000Z TO #{Date.today}T00:00:00.000Z]" },
       :month_1 => { :label => 'Menos de 1 mês', :fq => "data:[#{Date.today - 1.months}T00:00:00.000Z TO #{Date.today}T00:00:00.000Z]" },
       :years_1 => { :label => 'Menos de 1 ano', :fq => "data:[#{Date.today - 1.years}T00:00:00Z TO #{Date.today}T00:00:00.000Z]" },
@@ -88,20 +88,20 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display 
-    config.add_index_field 'data', :label => 'Data'
-    config.add_index_field 'secretaria', :label => 'Secretaria'
-    config.add_index_field 'orgao', :label => 'Orgão'
-    config.add_index_field 'tipo_conteudo', :label => 'Tipo de Conteúdo'
-    config.add_index_field 'texto', :label => 'Texto', :highlight => true
+    config.add_index_field 'org', :label => 'Orgão'
+    config.add_index_field 'pedido', :label => 'Pedido'
+    config.add_index_field 'resposta', :label => 'Resposta', :highlight => true
+    #config.add_index_field 'tipo_conteudo', :label => 'Tipo de Conteúdo'
+    #config.add_index_field 'texto', :label => 'Texto', :highlight => true
 
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display 
-    config.add_show_field 'data', :label => 'Data'
-    config.add_show_field 'secretaria', :label => 'Secretaria'
-    config.add_show_field 'orgao', :label => 'Orgão'
-    config.add_show_field 'tipo_conteudo', :label => 'Tipo de Conteúdo'
-    config.add_show_field 'texto', :label => 'Texto'
+    config.add_show_field 'org', :label => 'Órgão'
+    config.add_show_field 'pedido', :label => 'Pergunta'
+    config.add_show_field 'resposta', :label => 'Resposta'
+    #config.add_show_field 'tipo_conteudo', :label => 'Tipo de Conteúdo'
+    #config.add_show_field 'texto', :label => 'Texto'
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
