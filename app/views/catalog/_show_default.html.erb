@@ -4,16 +4,13 @@
 	    <dt class="blacklight-data">Data:</dt>
 	    <dd class="blacklight-data"><%= formatarData(render_document_show_field_value document, :field => 'data') %></dd>
 
-	    <dt class="blacklight-secretaria">Secretaria:</dt>
-	    <dd class="blacklight-secretaria"><%= (render_document_show_field_value document, :field => 'secretaria') %></dd>
+	    <dt class="blacklight-secretaria">Órgão:</dt>
+	    <dd class="blacklight-secretaria"><%= (render_document_show_field_value document, :field => 'org') %></dd>
 
-	    <dt class="blacklight-orgao">Orgão:</dt>
-	    <dd class="blacklight-orgao"><%= (render_document_show_field_value document, :field => 'orgao') %></dd>
+	    <dt class="blacklight-orgao">Pergunta:</dt>
+	    <dd class="blacklight-orgao"><%= (render_document_show_field_value document, :field => 'pedido') %></dd>
 
-	    <dt class="blacklight-tipo_conteudo">Tipo de Conteúdo:</dt>
-	    <dd class="blacklight-tipo_conteudo"><%= (render_document_show_field_value document, :field => 'tipo_conteudo') %></dd>
-
-	    <dt class="blacklight-texto">Texto:</dt>
-	    <dd class="blacklight-texto"><%= textoFormatado(render_document_show_field_value document, :field => 'texto') %></dd>
+	    <dt class="blacklight-texto">Resposta:</dt>
+	    <dd class="blacklight-texto"><%= textoFormatado(render_document_show_field_value document, :field => 'resposta') %></dd>
 
 </dl>
