@@ -1,8 +1,7 @@
-Diário Livre
+Pedido Respondido
 ============
 
-Sistema de busca do Diário Oficial Municipal de São Paulo.
-Atualmente rodando aqui: http://devcolab.each.usp.br/do/
+Sistema de busca para consulta de pedidos de informação já respondidos por determinado órgão público em decorrência da Lei de Acesso à Informação. Desenvolvido a partir do projeto "Diário Livre", que atualmente roda aqui: http://devcolab.each.usp.br/do/
 
 ## Instalação
 
