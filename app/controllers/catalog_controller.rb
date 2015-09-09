@@ -10,7 +10,8 @@ class CatalogController < ApplicationController
     config.default_solr_params = { 
       :qt => 'search',
       :rows => 10,
-      :df => 'texto',
+      :df => 'pedido',
+      :df => 'resposta',
       :"hl" => true,
       :"hl.snippets" => 3,
       :"hl.fragsize" => 250
@@ -128,17 +129,17 @@ class CatalogController < ApplicationController
     # case for a BL "search field", which is really a dismax aggregate
     # of Solr search fields. 
     
-    #config.add_search_field('title') do |field|
+    #config.add_search_field('pedido') do |field|
       # solr_parameters hash are sent to Solr as ordinary url query params. 
-      #field.solr_parameters = { :'spellcheck.dictionary' => 'title' }
+      #field.solr_parameters = { :'spellcheck.dictionary' => 'pedido' }
 
       # :solr_local_parameters will be sent using Solr LocalParams
       # syntax, as eg {! qf=$title_qf }. This is neccesary to use
       # Solr parameter de-referencing like $title_qf.
       # See: http://wiki.apache.org/solr/LocalParams
       #field.solr_local_parameters = { 
-        #:qf => '$title_qf',
-        #:pf => '$title_pf'
+        #:qf => '$pedido_qf',
+        #:pf => '$pedido_pf'
       #}
     #end
     
