@@ -11,12 +11,11 @@ class CatalogController < ApplicationController
       :qt => 'search',
       :rows => 10,
       :df => 'pedido',
-      :df => 'resposta',
       :"hl" => true,
       :"hl.snippets" => 3,
       :"hl.fragsize" => 250
     }
-    
+  
     # solr path which will be added to solr base url before the other solr params.
     config.solr_path = 'select' 
     
@@ -122,7 +121,7 @@ class CatalogController < ApplicationController
     # solr request handler? The one set in config[:default_solr_parameters][:qt],
     # since we aren't specifying it otherwise. 
     
-    #config.add_search_field 'texto', :label => 'Texto'
+    #config.add_search_field 'pedido', :label => 'Texto'
     
 
     # Now we see how to over-ride Solr request handler defaults, in this

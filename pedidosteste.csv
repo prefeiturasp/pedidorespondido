@@ -1,5 +1,5 @@
-id,org,pedido,resposta
-1,MEC,Gostaria de saber das vagas de creches,não é do escopo
-2,CGU,Quantos órgãos foram auditados em 2015,foram auditados 23847 órgãos
-3,MPOG,Quantos gestores existem na carreira,Existem 2837823 servidores
-4,MDS,Quantos municipios recebem auxilio para merenda com orgânicos,Nenhum
+id,org,pedido,resposta,data
+1,MEC,Gostaria de saber das vagas de creches,não é do escopo,2015-01-03T00:00:00Z
+2,CGU,Quantos órgãos foram auditados em 2015,foram auditados 23847 órgãos,2012-01-03T00:00:00Z
+3,MPOG,Quantos gestores existem na carreira,Existem 2837823 servidores,2013-01-03T00:00:00Z
+4,MDS,Quantos municipios recebem auxilio para merenda com orgânicos,Nenhum,2014-01-03T00:00:00Z
