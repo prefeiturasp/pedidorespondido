@@ -3,6 +3,8 @@
 
 
 <dl class="dl-horizontal  dl-invert">
+		<dt class="blacklight-data">Data:</dt>
+		<dd class="blacklight-data"><%= formatarData(render_document_show_field_value document, :field => 'data') %></dd>
 	    <dt class="blacklight-secretaria">Órgão:</dt>
 	    <dd class="blacklight-secretaria"><%= (render_document_show_field_value document, :field => 'org') %></dd>
 	    <dt class="blacklight-orgao">Pergunta:</dt>
