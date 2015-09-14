@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   Blacklight::Marc.add_routes(self)
   devise_for :users
 
-  get "/:id" => "catalog#show"
+  get "/:id" => "catalog#show", :constraints => {:id => /[0-9]+/}
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
