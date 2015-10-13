@@ -1,6 +1,6 @@
 h1 Busca Avançada
 
-p Por padrão, quando se digita algo no formulário de busca acima e aperta-se o botão "Buscar", a busca é feita no campo <strong>texto</strong> de cada artigo dos Diários. Porém, utilizando-se uma sintaxe especial, é possivel que a busca seja feita em outros campos dos artigos. Isso permite, por exemplo, buscar artigos publicados por um determinado órgão. Para fazer uma busca em outros campos que não sejam o texto principal do artigo, deve-se utilizar a seguinte sintaxe:
+p Por padrão, quando se digita algo no formulário de busca acima e aperta-se o botão "Buscar", a busca é feita no campo <strong>pedido</strong> de cada solicitação de informação registrada. Porém, utilizando-se uma sintaxe especial, é possivel que a busca seja feita em outros campos. Isso permite, por exemplo, buscar solicitações reegistradas em um determinado órgão. Para fazer uma busca em outros campos que não sejam o texto do pedido, deve-se utilizar a seguinte sintaxe:
 
 .well campo1:valor1 campo2:valor2 campo3:valor3 ...
 
@@ -11,49 +11,55 @@ h2 Campos de busca
 p Os campos que podem ser usados na busca são:
 
 ul
-  li : strong secretaria
-  li : strong orgao
-  li : strong tipo_conteudo
-  li : strong texto
+  li : strong pedido
+  li : strong org
+  li : strong resposta
+  li : strong recurso_pr
+  li : strong resposta1
+  li : strong recurso2
+  li : strong parecer_cgm
+  li : strong resposta2
+  li : strong recurso3
+  li : strong resposta3
   li : strong data
 
 h2 Exemplos
 
 p 
-  | Para procurar por artigos que contenham a palavra "educação" no campo 
-  strong secretaria 
-  | "diretoria" no campo 
-  strong orgao 
+  | Para procurar por solicitações que contenham a palavra "educação" no campo 
+  strong pedido 
+  | "SME" no campo 
+  strong org 
   | e "cronograma" no 
-  strong texto 
-  | do próprio artigo, pode-se buscar pela seguinte frase:
+  strong resposta 
+  | da solicitação, pode-se buscar pela seguinte frase:
 
 .well
-  strong secretaria:
+  strong pedido:
   | educação 
-  strong orgao:
-  | diretoria 
-  strong texto:
+  strong org:
+  | SME 
+  strong resposta:
   | cronograma
 
 p
   | De maneira análoga, para procurar por artigos que contenham as palavras "verde e meio ambiente" no campo 
-  strong secretaria
+  strong org
   | , "editais" no campo 
-  strong tipo_conteudo 
+  strong resposta 
   | e "aprovação" no campo 
-  strong texto
+  strong pedido
   | , pode-se buscar pela frase abaixo:
 
 .well
-  strong secretaria:
+  strong org:
   | "verde e meio ambiente" 
-  strong tipo_conteudo:
+  strong resposta:
   | editais aprovação
 
 p 
   | Repare que não foi especificado o campo para a palavra "aprovação". Nesse caso, o campo padrão de busca é o campo 
-  strong texto
+  strong pedido
   | .
 
 p

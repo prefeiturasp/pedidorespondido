@@ -929,10 +929,7 @@
    <field name="content_type" type="string" indexed="true" stored="true" multiValued="true"/>
    <field name="last_modified" type="date" indexed="true" stored="true"/>
    <field name="links" type="string" indexed="true" stored="true" multiValued="true"/>
-
-   <field name="id" type="string" indexed="true" stored="true" required="true" /> 
    <field name="retranca" type="string" indexed="true" stored="true" /> 
-   <field name="data" type="date" indexed="true" stored="true"/>
    <field name="tipo_conteudo" type="text_general" indexed="true" stored="true"/>
    <field name="tipo_conteudo_facet" type="string" indexed="true" stored="false"/>
    <field name="secretaria" type="text_general" indexed="true" stored="true"/>
@@ -941,20 +938,20 @@
    <field name="orgao_facet" type="string" indexed="true" stored="false"/>
    <field name="texto" type="text_general" indexed="true" stored="true"/>
    <field name="texto_facet" type="string" indexed="true" stored="false"/>
+   <field name="id" type="string" indexed="false" stored="true" required="true"/> 
+   <field name="data" type="date" indexed="true" stored="true"/>
    <field name="org" type="text_general" indexed="true" stored="true"/>
    <field name="org_facet" type="string" indexed="true" stored="false"/>
    <field name="pedido" type="text_general" indexed="true" stored="true"/>
    <field name="pedido_facet" type="string" indexed="true" stored="false"/>
    <field name="resposta" type="text_general" indexed="true" stored="true"/>
-   <field name="resposta_facet" type="string" indexed="true" stored="false"/>
-   
-   
-
-   
-   
-
-
-
+   <field name="recurso_pr" type="text_general" indexed="true" stored="true"/>
+   <field name="resposta1" type="text_general" indexed="true" stored="true"/>
+   <field name="recurso2" type="text_general" indexed="true" stored="true"/>
+   <field name="parecer_cgm" type="text_general" indexed="true" stored="true"/>
+   <field name="resposta2" type="text_general" indexed="true" stored="true"/>
+   <field name="recurso3" type="text_general" indexed="true" stored="true"/>
+   <field name="resposta3" type="text_general" indexed="true" stored="true"/>
 
    <!-- catchall field, containing all other searchable text fields (implemented
         via copyField further on in this schema  -->
@@ -1040,12 +1037,14 @@
         is added to the index.  It's used either to index the same field differently,
         or to add multiple fields to the same field for easier/faster searching.  -->
 
-   <copyField source="cat" dest="text"/>
-   <copyField source="name" dest="text"/>
-   <copyField source="manu" dest="text"/>
-   <copyField source="features" dest="text"/>
-   <copyField source="includes" dest="text"/>
-   <copyField source="manu" dest="manu_exact"/>
+   <copyField source="pedido" dest="text"/>
+   <copyField source="resposta" dest="text"/>
+   <copyField source="recurso_pr" dest="text"/>
+   <copyField source="resposta1" dest="text"/>
+   <copyField source="recurso2" dest="text"/>
+   <copyField source="parecer_cgm" dest="text"/>
+   <copyField source="recurso3" dest="text"/>
+   <copyField source="resposta3" dest="text"/>
    
    <!-- Copia conteudo para os campos das facets -->
    <copyField source="tipo_conteudo" dest="tipo_conteudo_facet"/>

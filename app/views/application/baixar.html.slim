@@ -1,35 +1,26 @@
-h1 Base do Diário Oficial Municipal de São Paulo (DOMSP)
+h1 Dados Abertos do e-SIC 
 
-p Essa página fornece links para baixar a base do DOMSP, desde 2003. Isso pode ser útil caso você queira, por exemplo, realizar algum tipo de processamento em larga escala, ou desenvolver seu próprio site de visualização dela.
-p É importante ressaltar que esses arquivos podem possuir vários gigabytes de tamanho. O grande tamanho da base torna difícil que ela seja usada sem algum tipo de processamento automático por computador.
+p Essa página fornece links para baixar as bases de dados do Sistema Eletrônico de Informação ao Cidadão (e-SIC) da Prefeitura de São Paulo. 
 
+p Neste primeiro momento, a Controladoria Geral do Município, responsável pela aplicação da Lei de Acesso à Informação na capital, disponibiliza informações desde a criação do e-Sic municipal, em agosto de 2012, até o mês de abril de 2015. São mais de 6.500 pedidos de informação, acompanhados de suas respostas e anexos. 
 
-/h2 Sobre o protocolo Torrent
-
-/p 
-/  | Para permitir um acesso mais resiliente e ágil à base, optou-se por utilizar o protocolo
-/  a< href="https://pt.wikipedia.org/wiki/BitTorrent" Torrent
-/  | . Porém, como ainda não e possível atualizar um torrent depois de sua publicação, os arquivos referentes ao ano atual serão disponibilizados pelo método convencional (HTTP).
-
-/p
-/  | Para baixar a base via torrent é possível que você precise instalar um cliente próprio. Recomendamos um dos seguintes, por serem software livre e disponíveis para diversos sistemas operacionais:
-/  ul
-/    li : a href="http://deluge-torrent.org" Deluge
-/    li : a href="https://www.transmissionbt.com" Transmission
-/p
-/  | Porém existem muitas 
-/  a< href="https://en.wikipedia.org/wiki/Comparison_of_BitTorrent_clients" opções de clientes para torrent
-/  | .
 
 
 markdown:
+
+  ## Privacidade
+
+  As bases, que passarão a ser divulgadas regularmente, são tratadas para remoção de informações pessoais, protegidas pela legislação.
+
+  Se você encontrou alguma informação pessoal nos pedidos divulgados, por favor, [comunique-nos imediatamente](http://www.prefeitura.sp.gov.br/portal/portal/contato/index.php?contato=1&url=http://transparencia.prefeitura.sp.gov.br/Paginas/PerguntasFrequentes.aspx). Da mesma forma, se foi ocultada alguma informação de interesse público, [avise-nos](http://www.prefeitura.sp.gov.br/portal/portal/contato/index.php?contato=1&url=http://transparencia.prefeitura.sp.gov.br/Paginas/PerguntasFrequentes.aspx)!
+
   ## Formatos da base
 
-  A base está disponibilizada em dois formatos: *bruto* e CSV. O primeiro contém todos os arquivos disponibilizados pela prefeitura, sem alteração nenhuma. Esses arquivos foram então descompactados de seus ZIPs; inferidas as datas de publicação a partir dos nomes dos ZIPs; separados os TXTs dos DOCs, PDFs etc; inferidas e padronizadas as codificações dos TXTs; inferidos os metadados a partir das retrancas; agrupados os TXTs e seus metadados em um CSV por dia de publicação; que foram finalmente compactados em um 7z.
+  A base está disponibilizada em duas partes: (1) a planilha, contendo todas as informações de pedido, resposta e eventuais recursos; e (2) os anexos.  
 
-  Resumindo: as bases em CSV não contêm todos os arquivos (contém apenas os TXTs que conseguiram ser processados), porém devem ser muito mais fáceis de serem utilizadas do que as bases *brutas*. Caso você queira utilizar todos os arquivos (como os DOCs e PDFs) ou os TXTs iniciais, terá que baixar e desbravar a base em formato *bruto*. Boa sorte. ;)
+  A Planilha (1) está disponível em três formatos: XLSX, ODS e CSV. Trata-se de uma base de dados extraída do sistema e-SIC e tratada pela equipe da Controladoria para remover as informações pessoais nela contidas. 
 
-  Aqui estão os [scripts que fizemos para o tratamento da base](https://github.com/rafaeusantana/docsolr/tree/master/scripts) [[Python]](https://pt.wikipedia.org/wiki/Python), talvez ajudem.
+  Já os Anexos (2) foram disponibilizados em lotes de arquivos compatcados (.zip) em diversos formatos, exatamente como foram divulgados pelos órgãos aos cidadãos, excluídas as informações pessoais eventualmente ali contidas: TXTS, DOCS, imagens, mapas, planilhas, PDFs, etc.  
 
   ##Licença
 
@@ -89,12 +80,6 @@ table.table.table-hover.table-bordered
       td ~
       td : a href="arquivos-baixar/zips/diarios-CSV-2015.7z" target="_blank" 7z
 
-p * Os torrents parecem não estar funcionando mais...
-
-p
-  | A integridade dos arquivos baixados pode ser verificada pelas suas
-  a< href="arquivos-baixar/zips/hashes.txt" hashes
-  |. No caso dos torrents eles já realizam essas verificações.
 
 div.text-center
   a href="http://lab.linkeddata.deri.ie/2010/lod-badges/"

@@ -1,12 +1,38 @@
 <%# default partial to display solr document fields in catalog show view -%>
 <dl class="dl-horizontal  dl-invert">
+	
+	<br>
 	<dt class="blacklight-data">Data do Pedido:</dt>
 	<dd class="blacklight-data"><%= formatarData(render_document_show_field_value document, :field => 'data') %></dd>
+	<br>
 	<dt class="blacklight-secretaria">Órgão:</dt>
 	<dd class="blacklight-secretaria"><%= (render_document_show_field_value document, :field => 'org') %></dd>
+	<br>
 	<dt class="blacklight-orgao">Pergunta:</dt>
 	<dd class="blacklight-orgao"><%= (render_document_show_field_value document, :field => 'pedido') %></dd>
+	<br>
 	<dt class="blacklight-texto">Resposta:</dt>
 	<dd class="blacklight-texto"><%= (render_document_show_field_value document, :field => 'resposta') %></dd>
+	<br>
+	<dt class="blacklight-texto">Recurso - 1ª Instância:</dt>
+	<dd class="blacklight-texto"><%= (render_document_show_field_value document, :field => 'recurso_pr') %></dd>
+	<br>
+	<dt class="blacklight-texto">Resposta - 1ª Instância:</dt>
+	<dd class="blacklight-texto"><%= (render_document_show_field_value document, :field => 'resposta1') %></dd>
+	<br>
+	<dt class="blacklight-texto">Recurso - 2ª Instância:</dt>
+	<dd class="blacklight-texto"><%= (render_document_show_field_value document, :field => 'recurso2') %></dd>
+	<br>
+	<dt class="blacklight-texto">Parecer da CGM-SP:</dt>
+	<dd class="blacklight-texto"><%= (render_document_show_field_value document, :field => 'parecer_cgm') %></dd>
+	<br>
+	<dt class="blacklight-texto">Resposta - 2ª Instância:</dt>
+	<dd class="blacklight-texto"><%= (render_document_show_field_value document, :field => 'resposta2') %></dd>
+	<br>
+	<dt class="blacklight-texto">Recurso - 3ª Instância:</dt>
+	<dd class="blacklight-texto"><%= (render_document_show_field_value document, :field => 'recurso3') %></dd>
+	<br>
+	<dt class="blacklight-texto">Resposta 3ª Instância:</dt>
+	<dd class="blacklight-texto"><%= (render_document_show_field_value document, :field => 'resposta3') %></dd>
 
 </dl>

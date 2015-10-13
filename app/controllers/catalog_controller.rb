@@ -8,8 +8,8 @@ class CatalogController < ApplicationController
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = { 
-      :qt => 'search',
-      :rows => 10,
+      :qt => 'pedido',
+      :rows => 20,
       :df => 'pedido',
       :"hl" => true,
       :"hl.snippets" => 3,
@@ -60,7 +60,7 @@ class CatalogController < ApplicationController
     #
     # :show may be set to false if you don't want the facet to be drawn in the 
     # facet bar
-    config.add_facet_field 'org_facet', :label => 'Órgão', :limit => 10 
+    config.add_facet_field 'org_facet', :label => 'Órgão', :limit => 15 
     #config.add_facet_field 'orgao_facet', :label => 'Orgão', :limit => 10 
     #config.add_facet_field 'tipo_conteudo_facet', :label => 'Tipo de Conteúdo', :limit => 10 
     #config.add_facet_field 'secretaria_facet', :label => 'Publication Year', :single => true
@@ -91,7 +91,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'org', :label => 'Orgão'
     config.add_index_field 'pedido', :label => 'Pedido', :highlight => true
     config.add_index_field 'resposta', :label => 'Resposta', :highlight => true
-    #config.add_index_field 'tipo_conteudo', :label => 'Tipo de Conteúdo'
+    config.add_index_field 'recurso_pr', :label => 'Recurso à 1ª Instância'
     #config.add_index_field 'texto', :label => 'Texto', :highlight => true
 
 
@@ -100,7 +100,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'org', :label => 'Órgão'
     config.add_show_field 'pedido', :label => 'Pergunta'
     config.add_show_field 'resposta', :label => 'Resposta'
-    #config.add_show_field 'tipo_conteudo', :label => 'Tipo de Conteúdo'
+    config.add_show_field 'recurso_pr', :label => 'Recurso à 1ª Instância'
     #config.add_show_field 'texto', :label => 'Texto'
 
     # "fielded" search configuration. Used by pulldown among other places.

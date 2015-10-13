@@ -7,9 +7,10 @@
 
 	    <dt class="blacklight-assunto">Pergunta:</dt>
 	    <dd class="blacklight-assunto"><%= render_index_field_value document, :field => 'pedido' %></dd>
+	    <br>
+	  	<!--dt class="blacklight-texto">Resposta:</dt>
+	    <dd class="blacklight-texto"><%= textoNaoFormatado((render_index_field_value document, :field => 'resposta').to_s[0..400], ['em'])%></dd-->
 
-	  	<dt class="blacklight-texto">Resposta:</dt>
-	    <dd class="blacklight-texto"><%= textoNaoFormatado((render_index_field_value document, :field => 'resposta').to_s[0..400], ['em'])%></dd>
 	    <% if false %>
 	    <dt>Formatos:</dt>
 			<dd><%= botaoExportador("JSON","/"+document.id+".json") %> <%= botaoExportador("XML","/"+document.id+".xml") %></dd>
