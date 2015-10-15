@@ -4,7 +4,7 @@
 
 <!--<div class="page-header row">
   <h1 class="col-md-8 page-heading"><%= t('blacklight.welcome') %></h1>
-  
+
   <ul class="nav nav-pills col-md-4">
     <li><a href="https://github.com/projectblacklight/blacklight/">Github</a></li>
     <li><a href="https://github.com/projectblacklight/blacklight/wiki">Wiki</a></li>
@@ -16,20 +16,21 @@
 
 <div id="getting-started">
   <h3 class='section-heading'>Seu pedido já foi respondido?</h3>
-  
-  <p> Com a Lei de Acesso à Informação (Lei Federal nº 12.527/2011) todos os órgãos públicos devem responder a solicitações de informação dos cidadãos e pessoas jurídicas, com prazos e procedimentos estabelecidos. 
+
+  <p> Com a Lei de Acesso à Informação (Lei Federal nº 12.527/2011) todos os órgãos públicos devem responder a solicitações de informação dos cidadãos e pessoas jurídicas, com prazos e procedimentos estabelecidos.
 
   <p> Mas cada pedido é respondido individualmente, isto é, somente a pessoa que formulou a pergunta sabe daquela resposta. Se todas as perguntas forem divulgadas, resguardadas as informações pessoais protegidas por Lei, todos saem ganhando: o poder público, que não precisa respondê-las novamente a cada pergunta; e os cidadãos, que podem ter sua resposta atendida prontamente. </p>
 
   <p> Em fase experimental, este projeto está sendo desenvolvido pela <b> Controladoria Geral do Município de São Paulo</b> a partir de tecnologias livres e poderá ser replicado por qualquer entidade pública disposta a divulgar sua base de pedidos de informação. </p>
 
-  <p> Enquanto o conteúdo dos pedidos municipais passa por tratamento para retirada de informações pessoais que não podem ser divulgadas, utilizaremos apenas pedidos de exemplo, para fins de testes </p>
+  <p> Nesta fase, os anexos têm que ser baixados separadamente. Eles estão disponíveis no <a href="http://transparencia.prefeitura.sp.gov.br/acesso-a-informacao/Paginas/SIC.aspx"> Portal da Transparência</a>. Basta consultar o lote de anexos por número de protocolo.</p>
+
 
   <h4> Desenvolvimento </h4>
 
-  Este site é um <a href="pt.wikipedia.org/wiki/Software_livre"> software livre </a> e aqui pode ser encontrado o <a href="//github.com/campagnucci/docsolr"> repositório do código fonte </a>. 
+  Este site é um <a href="pt.wikipedia.org/wiki/Software_livre"> software livre </a> e aqui pode ser encontrado o <a href="https://github.com/campagnucci/pedidorespondido"> repositório do código fonte </a>.
 
-  Este site se baseia principalmente em duas tecnologias (também livres): [BlackLight](//projectblacklight.org) e [Solr](//lucene.apache.org/solr) e foi desenvolvido a partir do projeto "Diário Livre"
+  Este site se baseia principalmente em duas tecnologias (também livres): <a href="http://projectblacklight.org">BlackLight</a> e <a href="http://lucene.apache.org/solr">Solr</a> e foi desenvolvido a partir do projeto "Diário Livre"
 
 </div>
 
@@ -40,18 +41,12 @@
 </div>
 %>
 <script>
-  $(function() {
-    $('#about a').on('click', function(e) {
-      e.preventDefault();
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      if ($('#about-content').html() == "") {
-        $('#about-content').load($(this).attr("href"), function() {
-          $('#about-content').show();
-        });
-      } else {
-        $('#about-content').toggle();
-      }
-    });
-  });
+  ga('create', 'UA-68885321-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
-
